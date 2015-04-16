@@ -1,5 +1,6 @@
 var webpack = require('webpack'),
-		path = require('path');
+		path = require('path'),
+		ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 	entry: [
@@ -13,17 +14,6 @@ module.exports = {
 		path: path.join(__dirname, 'public'),
 		filename: 'bundle.js'
 	},
-
-	plugins: [
-		// This cuts down React's lib size on production.
-		new webpack.DefinePlugin({
-			'process.env': {
-				NODE_ENV: JSON.stringify(process.env.NODE_ENV)
-			}
-		}),
-		new webpack.IgnorePlugin(/vertx/),
-		new webpack.NoErrorsPlugin()
-	],
 
 	devtool: '#inline-source-map',
 	debug: true,
@@ -77,13 +67,22 @@ module.exports = {
 
 			{
 				test: /\.(scss|sass)$/,
-				loader: 'style-loader!css-loader!sass-loader'
-			},
-
-			{
-				test: /\.(scss|sass)$/,
-				loader: 'react-hot-loader'
+				loader: ExtractTextPlugin.extract(
+					'css-loader?sourceMap!sass-loader?sourceMap'
+				)
 			}
 		]
-	}
+	},
+
+	plugins: [
+		// This cuts down React's lib size on production.
+		new webpack.DefinePlugin({
+			'process.env': {
+				NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+			}
+		}),
+		new webpack.IgnorePlugin(/vertx/),
+		new ExtractTextPlugin('styles.css'),
+		new webpack.NoErrorsPlugin()
+	]
 };
