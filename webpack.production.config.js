@@ -77,6 +77,7 @@ module.exports = {
 			}
 		}),
 		new ExtractTextPlugin('styles.css'),
-		new webpack.IgnorePlugin(/vertx/)
+		new webpack.IgnorePlugin(/vertx/),
+		new webpack.optimize.UglifyJsPlugin({ minimize: true })
 	]
 };

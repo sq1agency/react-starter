@@ -21,20 +21,22 @@ __Note:__ Build process target files overwrite dev process files for ease of use
 ## Features
 - HTML5 (obviously)
 - Support for IE9+
-- Modernizr
-- Bower
-- Webpack (Development)
-	- Webpack development server
-	- React Hot Loader
-- Webpack (Build)
-- React
-- react-router
+- [React](https://facebook.github.io/react/)
+- [react-router](https://github.com/rackt/react-router)
+- [Bower](http://bower.io)
+- [Webpack](http://webpack.github.io/) (Development)
+	- [Webpack development server](http://webpack.github.io/docs/webpack-dev-server.html)
+	- [React Hot Loader](http://gaearon.github.io/react-hot-loader/)
+	- [SASS Loader](https://github.com/jtangelder/sass-loader)
 
 ## Optional Features
-:shipit: We try to keep what we need to ship to a minimum. As such, here's a list of recommended libraries that you may need to install through Bower or implement through a CDN.
+:shipit: We try to keep what we need to ship to a minimum. As such, here's a list of recommended libraries that you may need to install through Bower, NPM, or implement through a CDN.
 
-- Bourbon
-- Susy
-- Neat
-- jQuery
-- FontAwesome
+As this particular starter-kit uses Webpack, it's __recommended__ that you install Javascript libraries through NPM whenever possible so that it can be easily required within modules. :money_with_wings:
+
+- [Bourbon](http://bourbon.io/) `bower install bourbon --save`
+- [Susy](http://susy.oddbird.net/) `bower install susy --save`
+- [Neat](http://neat.bourbon.io/) `bower install neat --save`
+- [jQuery](http://jquery.com/) `npm install jquery --save`
+- [Radium](http://projects.formidablelabs.com/radium/) `npm install radium --save` (particularly for development purposes. Allows you to hot-load styles!)
+- [FontAwesome](http://fortawesome.github.io/Font-Awesome/icons/) `bower install fontawesome --save`
