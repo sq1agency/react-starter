@@ -3,7 +3,7 @@ var webpack = require('webpack'),
 
 module.exports = {
 	entry: [
-		'webpack-dev-server/client?http://0.0.0.0:8000',
+		'webpack-dev-server/client?http://0.0.0.0:8000/public',
 		'webpack/hot/only-dev-server',
 		'./app/app.jsx'
 	],
@@ -77,7 +77,12 @@ module.exports = {
 
 			{
 				test: /\.(scss|sass)$/,
-				loader: 'css-loader!sass-loader'
+				loader: 'style-loader!css-loader!sass-loader'
+			},
+
+			{
+				test: /\.(scss|sass)$/,
+				loader: 'react-hot-loader'
 			}
 		]
 	}
