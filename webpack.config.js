@@ -4,7 +4,7 @@ var webpack = require('webpack'),
 
 module.exports = {
 	entry: [
-		'webpack-dev-server/client?http://0.0.0.0:8000/public',
+		'webpack-dev-server/client?http://0.0.0.0:8000',
 		'webpack/hot/only-dev-server',
 		'./app/app.jsx'
 	],
@@ -62,13 +62,22 @@ module.exports = {
 
 			{
 				test: /\.css$/,
-				loader: 'css-loader'
+				loader: ExtractTextPlugin.extract(
+					'css-loader'
+				)
 			},
 
 			{
 				test: /\.(scss|sass)$/,
 				loader: ExtractTextPlugin.extract(
 					'css-loader?sourceMap!sass-loader?sourceMap'
+				)
+			},
+
+			{
+				test: /\.less$/,
+				loader: ExtractTextPlugin.extract(
+					'css-loader?sourceMap!less-loader?sourceMap'
 				)
 			}
 		]

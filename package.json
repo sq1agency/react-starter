@@ -1,6 +1,6 @@
 {
   "name": "react-starter",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "This starter is focused on frontend React applications.",
   "main": "index.html",
   "scripts": {
@@ -15,6 +15,8 @@
     "html-loader": "^0.2.3",
     "json-loader": "^0.5.1",
     "jsx-loader": "^0.13.1",
+    "less": "^2.5.0",
+    "less-loader": "^2.2.0",
     "load-grunt-tasks": "^3.1.0",
     "node-sass": "^2.1.1",
     "react": "^0.13.1",
