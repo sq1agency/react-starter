@@ -6,6 +6,7 @@ var React = require('react'),
 
 // Requires all the SCSS.
 require('./sass/main.scss');
+require('../bower_components/bootstrap/dist/css/bootstrap.min.css');
 
 Router.run(
 	routes,
