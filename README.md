@@ -40,3 +40,17 @@ As this particular starter-kit uses Webpack, it's __recommended__ that you insta
 - [jQuery](http://jquery.com/) `npm install jquery --save`
 - [Radium](http://projects.formidablelabs.com/radium/) `npm install radium --save` (particularly for development purposes. Allows you to hot-load styles!)
 - [FontAwesome](http://fortawesome.github.io/Font-Awesome/icons/) `bower install fontawesome --save`
+
+### CDN Drop-Ins
+**jQuery** (v. 2.1.3) IE >=9
+```html
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+```
+**jQuery** (v. 1.11.2)
+```html
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+```
+**FontAwesome** (v. 4.3.0)
+```html
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+```
