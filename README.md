@@ -18,6 +18,13 @@ __Note:__ Build process target files overwrite dev process files for ease of use
 ./bin/build
 ```
 
+## Important Files
+|File|What's Important About It?
+|------|------|
+|`app/components`|Where you should place the React components.|
+|`app/sass/main.scss`|The main Sass file, where you should put your Sass imports.|
+|`app/routes.jsx`|Where the react-router routes reside. You should add your routes here.|
+
 ## Features
 - HTML5 (obviously)
 - Support for IE9+
